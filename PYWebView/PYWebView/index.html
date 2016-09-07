@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Hello World</title>
+
+    <script type="text/javascript">
+            
+        function uiwebviewNSLog() {
+            window.location.href = "pywebview://TestPYUIWebviewNSLog";
+        }
+        
+        function uiwebviewJSNSLog() {
+            pywebviewJS.pyNSLog("TestPYUIWebViewJSNSLog");
+        }
+
+        function callbackJSAlert(alertContent) {
+            alert(alertContent);
+        }
+        function wkwebviewNSLog() {
+            window.webkit.messageHandlers.pywebviewJS.postMessage('TestPYWKWebViewJSNSLog');
+        }
+    </script>
+
+</head>
+
+<body>
+    <div style="width:100%;height:100%;position:fixed;justify-content:center;align-items:center;display:-webkit-flex;">
+        <div>
+            <input onclick="uiwebviewNSLog()" type="button" value="uiwebviewNSLog"/>
+            <p>
+            <input onclick="uiwebviewJSNSLog()" type="button" value="uiwebviewJSNSLog"/>
+            <p>
+            <input onclick="wkwebviewNSLog()" type="button" value="wkwebviewNSLog"/>
+            <p>
+        </div>
+    </div>
+</body>
+
+</html>
