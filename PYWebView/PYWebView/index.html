@@ -5,8 +5,10 @@
 <head>
     <title>Hello World</title>
 
+    <script src="www/cordova.js"></script>
+
     <script type="text/javascript">
-            
+        
         function uiwebviewNSLog() {
             window.location.href = "pywebview://TestPYUIWebviewNSLog";
         }
@@ -21,6 +23,9 @@
         function wkwebviewNSLog() {
             window.webkit.messageHandlers.pywebviewJS.postMessage('TestPYWKWebViewJSNSLog');
         }
+        function cdvwebviewNSLog() {
+            pywebviewJS.pyNSLog("TestPYCDVWebViewJSNSLog");
+        }
     </script>
 
 </head>
@@ -33,6 +38,8 @@
             <input onclick="uiwebviewJSNSLog()" type="button" value="uiwebviewJSNSLog"/>
             <p>
             <input onclick="wkwebviewNSLog()" type="button" value="wkwebviewNSLog"/>
+            <p>
+            <input onclick="cdvwebviewNSLog()" type="button" value="cdvwebviewNSLog"/>
             <p>
         </div>
     </div>

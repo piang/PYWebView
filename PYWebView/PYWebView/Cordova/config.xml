@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.piang.PYWebView" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="BackupWebStorage" value="local" />
+    <feature name="CDVWKWebViewEngine">
+        <param name="ios-package" value="CDVWKWebViewEngine" />
+    </feature>
+    <feature name="PYCDVWebViewNSLog">
+        <param name="ios-package" value="PYCDVWebViewNSLog" />
+    </feature>
     <name>HelloCordova</name>
     <description>
         JS and Native call
@@ -18,4 +25,5 @@
     <allow-intent href="geo:*" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
 </widget>

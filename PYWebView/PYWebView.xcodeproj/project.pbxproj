@@ -21,6 +21,10 @@
 		E8E181901D80031500C02C04 /* PYSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E1818F1D80031500C02C04 /* PYSafariViewController.swift */; };
 		E8E181921D800E9400C02C04 /* PYCDVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E181911D800E9400C02C04 /* PYCDVViewController.swift */; };
 		E8E1819A1D80145900C02C04 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = E8E181991D80145900C02C04 /* config.xml */; };
+		E8E181B61D80432C00C02C04 /* www in Resources */ = {isa = PBXBuildFile; fileRef = E8E181B51D80432C00C02C04 /* www */; };
+		E8E181BD1D80436100C02C04 /* CDVWKWebViewEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E181BA1D80436100C02C04 /* CDVWKWebViewEngine.m */; };
+		E8E181BE1D80436100C02C04 /* CDVWKWebViewUIDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8E181BC1D80436100C02C04 /* CDVWKWebViewUIDelegate.m */; };
+		E8E181C11D8049F000C02C04 /* PYCDVWebViewNSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E181C01D8049F000C02C04 /* PYCDVWebViewNSLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,12 @@
 		E8E181911D800E9400C02C04 /* PYCDVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PYCDVViewController.swift; sourceTree = "<group>"; };
 		E8E181931D80109600C02C04 /* PYWebView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PYWebView-Bridging-Header.h"; sourceTree = "<group>"; };
 		E8E181991D80145900C02C04 /* config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = config.xml; sourceTree = "<group>"; };
+		E8E181B51D80432C00C02C04 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		E8E181B91D80436100C02C04 /* CDVWKWebViewEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDVWKWebViewEngine.h; sourceTree = "<group>"; };
+		E8E181BA1D80436100C02C04 /* CDVWKWebViewEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDVWKWebViewEngine.m; sourceTree = "<group>"; };
+		E8E181BB1D80436100C02C04 /* CDVWKWebViewUIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDVWKWebViewUIDelegate.h; sourceTree = "<group>"; };
+		E8E181BC1D80436100C02C04 /* CDVWKWebViewUIDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDVWKWebViewUIDelegate.m; sourceTree = "<group>"; };
+		E8E181C01D8049F000C02C04 /* PYCDVWebViewNSLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PYCDVWebViewNSLog.swift; sourceTree = "<group>"; };
 		ECC3EBAB9220ACD9FDC61A9F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -172,9 +182,39 @@
 		E8E181981D80145900C02C04 /* Cordova */ = {
 			isa = PBXGroup;
 			children = (
+				E8E181B71D80433800C02C04 /* plugins */,
+				E8E181B51D80432C00C02C04 /* www */,
 				E8E181991D80145900C02C04 /* config.xml */,
 			);
 			path = Cordova;
+			sourceTree = "<group>";
+		};
+		E8E181B71D80433800C02C04 /* plugins */ = {
+			isa = PBXGroup;
+			children = (
+				E8E181BF1D8049B900C02C04 /* piang-plugin-webviewNSLog */,
+				E8E181B81D80436100C02C04 /* cordova-plugin-wkwebview-engine */,
+			);
+			path = plugins;
+			sourceTree = "<group>";
+		};
+		E8E181B81D80436100C02C04 /* cordova-plugin-wkwebview-engine */ = {
+			isa = PBXGroup;
+			children = (
+				E8E181B91D80436100C02C04 /* CDVWKWebViewEngine.h */,
+				E8E181BA1D80436100C02C04 /* CDVWKWebViewEngine.m */,
+				E8E181BB1D80436100C02C04 /* CDVWKWebViewUIDelegate.h */,
+				E8E181BC1D80436100C02C04 /* CDVWKWebViewUIDelegate.m */,
+			);
+			path = "cordova-plugin-wkwebview-engine";
+			sourceTree = "<group>";
+		};
+		E8E181BF1D8049B900C02C04 /* piang-plugin-webviewNSLog */ = {
+			isa = PBXGroup;
+			children = (
+				E8E181C01D8049F000C02C04 /* PYCDVWebViewNSLog.swift */,
+			);
+			path = "piang-plugin-webviewNSLog";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E181B61D80432C00C02C04 /* www in Resources */,
 				E817F63C1D7D4B7F00AEBFF3 /* LaunchScreen.storyboard in Resources */,
 				E897BB391D7E5F2C00709150 /* index.html in Resources */,
 				E817F6391D7D4B7F00AEBFF3 /* Assets.xcassets in Resources */,
@@ -363,7 +404,10 @@
 			files = (
 				E817F6341D7D4B7F00AEBFF3 /* PYWKWebViewController.swift in Sources */,
 				E817F6301D7D4B7F00AEBFF3 /* AppDelegate.swift in Sources */,
+				E8E181BD1D80436100C02C04 /* CDVWKWebViewEngine.m in Sources */,
+				E8E181C11D8049F000C02C04 /* PYCDVWebViewNSLog.swift in Sources */,
 				E8E181901D80031500C02C04 /* PYSafariViewController.swift in Sources */,
+				E8E181BE1D80436100C02C04 /* CDVWKWebViewUIDelegate.m in Sources */,
 				E897BB3B1D7EC9DB00709150 /* PYWebViewModel.swift in Sources */,
 				E817F6321D7D4B7F00AEBFF3 /* PYUIWebViewController.swift in Sources */,
 				E8E181921D800E9400C02C04 /* PYCDVViewController.swift in Sources */,
