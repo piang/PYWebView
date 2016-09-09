@@ -42,6 +42,11 @@ class PYUIWebViewController: UIViewController,UIWebViewDelegate {
             
             NSLog("%@", ((request.URL?.description)! as NSString).substringFromIndex(12))
             
+            /**
+             * 调用JS方法
+             **/
+            //webView.stringByEvaluatingJavaScriptFromString("alert('webViewAlertAction')")
+            
             return false
         }
         return true

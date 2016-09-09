@@ -10,6 +10,8 @@
 
     func pyNSLog(command:CDVInvokedUrlCommand) -> Void {
         NSLog("%@", command.argumentAtIndex(0) as! String)
+        
+        return self.commandDelegate.sendPluginResult(CDVPluginResult(status: CDVCommandStatus_OK), callbackId: command.callbackId)
     }
     
 }
